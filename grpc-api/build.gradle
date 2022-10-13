@@ -1,0 +1,16 @@
+// -- Installing plugins
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.google.protobuf:protobuf-gradle-plugin:$versions.protobufPlugin"
+    }
+}
+
+subprojects {
+    apply from: "$rootDir/gradle/grpc.gradle"
+    apply from: "$rootDir/gradle/grpcDependencies.gradle"
+    apply from: "$rootDir/gradle/publish.gradle"
+}

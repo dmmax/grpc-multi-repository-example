@@ -1,0 +1,15 @@
+configurations {
+    provided
+}
+
+sourceSets {
+    main.compileClasspath += configurations.provided
+    test.compileClasspath += configurations.provided
+}
+
+ext.versions = [
+        protobuf        : '3.15.6',
+        protobufPlugin  : '0.8.19',
+        grpcPlugin      : '1.36.0',
+        grpcJava        : '1.49.2'
+]

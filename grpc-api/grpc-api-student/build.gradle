@@ -1,0 +1,3 @@
+dependencies {
+    protobuf project(':grpc-api:grpc-api-common')
+}

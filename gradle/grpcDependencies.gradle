@@ -1,0 +1,12 @@
+dependencies {
+    implementation "com.google.protobuf:protobuf-java:$versions.protobuf",
+            "io.grpc:grpc-stub:$versions.grpcJava",
+            "io.grpc:grpc-protobuf:$versions.grpcJava",
+            "io.grpc:grpc-core:${versions.grpcJava}"
+
+    if (JavaVersion.current().isJava9Compatible()) {
+        // Workaround for @javax.annotation.Generated
+        // see: https://github.com/grpc/grpc-java/issues/3633
+        implementation 'javax.annotation:javax.annotation-api:1.3.1'
+    }
+}

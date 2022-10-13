@@ -1,0 +1,9 @@
+apply from: "$rootDir/gradle/grpcDependencies.gradle"
+
+dependencies {
+    implementation project(":grpc-services").subprojects,
+            "io.grpc:grpc-services:${versions.grpcJava}",
+            "io.grpc:grpc-netty-shaded:${versions.grpcJava}",
+            "me.dmmax.example.grpc:grpc-api-common:${project.version}",
+            "me.dmmax.example.grpc:grpc-api-student:${project.version}"
+}

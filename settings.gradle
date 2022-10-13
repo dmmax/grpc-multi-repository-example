@@ -1,0 +1,9 @@
+rootProject.name = 'grpc-example'
+include 'grpc-api'
+include 'grpc-api:grpc-api-student'
+include 'grpc-api:grpc-api-common'
+include 'grpc-services'
+include 'grpc-services:grpc-service-student'
+include 'grpc-app'
+include 'grpc-services:grpc-service-common'
+

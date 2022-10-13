@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package me.dmmax.example.grpc.student.v1;
+
+import "google/protobuf/duration.proto";
+import "me/dmmax/example/grpc/common/entity.proto";
+
+option java_multiple_files = true;
+
+// -- Messages --
+
+message Person {
+
+  string first_name = 1;
+  string last_name = 2;
+  google.protobuf.Duration birthday = 3;
+}
+
+message StudentRequest {
+
+  me.dmmax.example.grpc.common.EntityId entity_id = 1;
+}
+
+message StudentResponse {
+
+  Person person = 1;
+  // Student card number
+  string card_number = 2;
+}
+
+// -- Service --
+
+service Student {
+
+  rpc Get(StudentRequest) returns (StudentResponse);
+}

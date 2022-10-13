@@ -1,0 +1,4 @@
+dependencies {
+    implementation project(":grpc-api:grpc-api-student"),
+            project(":grpc-services:grpc-service-common")
+}
