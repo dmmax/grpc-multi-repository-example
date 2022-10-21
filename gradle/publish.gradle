@@ -2,8 +2,8 @@ apply plugin: 'maven-publish'
 
 publishing {
     publications {
-        publishApi(MavenPublication) {
-            artifact jar
+        api(MavenPublication) {
+            from components.java
         }
     }
 }

@@ -1,6 +1,5 @@
 allprojects {
     group 'me.dmmax.example.grpc'
-    version '0.0.1'
 }
 
 subprojects {
@@ -9,6 +8,7 @@ subprojects {
         mavenCentral()
     }
     apply plugin: 'java'
+    apply plugin: 'java-library'
     apply plugin: 'idea'
     apply from: "$rootDir/gradle/versions.gradle"
     // The version will be applied for all

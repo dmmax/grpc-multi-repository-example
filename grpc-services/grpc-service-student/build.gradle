@@ -1,4 +1,6 @@
+version = '0.0.2'
+
 dependencies {
-    implementation project(":grpc-api:grpc-api-student"),
-            project(":grpc-services:grpc-service-common")
+    api "me.dmmax.example.grpc:grpc-api-student:0.0.2",
+            "me.dmmax.example.grpc:grpc-service-common:0.0.1"
 }

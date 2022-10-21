@@ -1,3 +1,5 @@
+version = '0.0.2'
+
 dependencies {
-    protobuf project(':grpc-api:grpc-api-common')
+    implementation "me.dmmax.example.grpc:grpc-api-common:0.0.1"
 }
